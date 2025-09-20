@@ -51,11 +51,13 @@ int main(){
 		system("cls");
 		switch (choice) {
 			case 1:
+				ip = getIP();
+				cout << "Your IP is: " << ip << "\n";
 				cout << "PORT (e.g. 8080): ";
 				cin >> port;
 				system("cls");
 				cout.flush();
-				result = runServer(Username, port);
+				result = runServer(Username, ip, port);
 				break;
 			case 2:
 				cout << "IP (e.g. 127.0.0.1): ";

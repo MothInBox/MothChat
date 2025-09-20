@@ -9,7 +9,7 @@ using namespace std;
 
 #pragma comment(lib, "Ws2_32.lib")
 
-int runServer(string Username, int port) {
+int runServer(string Username, string ip, int port) {
 	string connectedUsername = "PEER";
     WSADATA wsaData;
     WSAStartup(MAKEWORD(2, 2), &wsaData);
@@ -23,7 +23,7 @@ int runServer(string Username, int port) {
     bind(server_fd, (sockaddr*)&addr, sizeof(addr));
     listen(server_fd, 1);
 
-    cout << "Server listening on port "<< port <<"...\n";
+    cout << ip <<" listening on port "<< port <<"...\n";
     SOCKET client_fd = accept(server_fd, nullptr, nullptr);
 	connectedUsername = usernameExchange(client_fd, Username);
      
