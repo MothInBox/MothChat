@@ -34,15 +34,14 @@ int runClient(string Username, string ip, int port) {
 
     cout << "Connected to " << connectedUsername << "!\n\n";
 
-    thread recvThread(receiveMessages, sock, connectedUsername);
+    thread recvThread(receiveMessages, sock, connectedUsername, Username);
 
     std::string message;
     while (true) {
-        cout << Username << ":";
         getline(cin, message);
-        cin.ignore();
         if (message == "/quit") break;
         send(sock, message.c_str(), message.size(), 0);
+        cout << Username << ": ";
     }
 
     closesocket(sock);

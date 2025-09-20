@@ -29,15 +29,14 @@ int runServer(string Username, string ip, int port) {
      
     cout << connectedUsername << " connected!\n\n";
 
-    thread recvThread(receiveMessages, client_fd, connectedUsername);
+    thread recvThread(receiveMessages, client_fd, connectedUsername, Username);
 
     string message;
     while (true) {
-        cout << Username << ":";
         getline(cin, message);
-		cin.ignore();
         if (message == "/quit") break;
         send(client_fd, message.c_str(), message.size(), 0);
+        cout << Username << ": ";
     }
 
     closesocket(client_fd);

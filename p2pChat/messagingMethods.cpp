@@ -9,14 +9,15 @@
 using namespace std;
 
 // Function to continuously receive messages from the socket and display them with the sender's username.
-void receiveMessages(SOCKET sock, string Username) {
+void receiveMessages(SOCKET sock, string recUsername, string Username) {
 	char buffer[1024]; // buffer for incoming messages
     while (true) {
 		int bytes = recv(sock, buffer, sizeof(buffer) - 1, 0); // leave space for null terminator
 		if (bytes <= 0) break; // connection closed
 		buffer[bytes] = '\0';
-		cout << "\r" << Username << ": " << buffer << "\n>";
+		cout << "\r" << recUsername << ": " << buffer << "\n";
 		cout.flush();
+        cout << Username << ": ";
     }
 }
 
