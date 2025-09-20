@@ -17,7 +17,7 @@ int runServer(string Username, string ip, int port) {
 
     sockaddr_in addr{};
     addr.sin_family = AF_INET;
-    addr.sin_addr.s_addr = htonl(INADDR_LOOPBACK); // localhost only
+    addr.sin_addr.s_addr = htonl(INADDR_ANY); // accept connections from any interface
     addr.sin_port = htons(port);
 
     bind(server_fd, (sockaddr*)&addr, sizeof(addr));
