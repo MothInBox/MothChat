@@ -1,5 +1,5 @@
 A very simple p2p console messaging app.
-Mainly did this out of intrest and to study networks and cryptography.
+Mainly did this out of interest and to study networks and cryptography.
 
 Plans for the future development are:
   Test connections outside of the local network
