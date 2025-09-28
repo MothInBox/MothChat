@@ -48,8 +48,3 @@
 PGP (Pretty Good Privacy) is an encryption method using a pair of keys (public and private). The plan is to incorporate PGP into MothChat with both manual and network modes to allow for encrypted messaging.
 
 ---
-
-## License
-
-This project is released for **educational purposes**. Add your preferred license here (MIT, GPL, etc.) if you want to share/reuse.
-
