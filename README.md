@@ -16,10 +16,15 @@
 - Winsock2 (included with Windows SDK)
 
 ### Building
-!using visual studio
+
+##using visual studio
 Open the solution in Visual Studio (`p2pChat.sln`).
 Build the solution (`Debug` or `Release`, `x64` recommended).
 
-using msbuild
+##using msbuild
 Open CMD and cd to the folder
 msbuild p2pChat.sln /p:Configuration=Release /p:Platform=x64
+
+###Plans
+##pgp functionality
+PGP or Pretty Good Privacy is an encryption method using 2 keys, public and private. I plan to incorporate this with a manual and network mode to allow for encrypted messaging
