@@ -17,14 +17,14 @@
 
 ### Building
 
-##using visual studio
-Open the solution in Visual Studio (`p2pChat.sln`).
-Build the solution (`Debug` or `Release`, `x64` recommended).
+####using visual studio
+ - Open the solution in Visual Studio (`p2pChat.sln`).
+ - Build the solution (`Debug` or `Release`, `x64` recommended).
 
-##using msbuild
-Open CMD and cd to the folder
-msbuild p2pChat.sln /p:Configuration=Release /p:Platform=x64
+####using msbuild
+ - Open CMD and cd to the folder
+ - msbuild p2pChat.sln /p:Configuration=Release /p:Platform=x64
 
 ###Plans
-##pgp functionality
-PGP or Pretty Good Privacy is an encryption method using 2 keys, public and private. I plan to incorporate this with a manual and network mode to allow for encrypted messaging
+####pgp functionality
+ - PGP or Pretty Good Privacy is an encryption method using 2 keys, public and private. I plan to incorporate this with a manual and network mode to allow for encrypted messaging
